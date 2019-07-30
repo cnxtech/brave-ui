@@ -51,7 +51,7 @@ import {
 } from '../../../components/icons'
 
 export type Social = { type: SocialType, url: string }
-export type SocialType = 'twitter' | 'youtube' | 'twitch' | 'reddit' | 'vimeo' | 'github'
+export type SocialType = 'twitter' | 'youtube' | 'twitch' | 'reddit' | 'vimeo' | 'github' | 'soundcloud'
 export type Donation = { tokens: string, converted: string, selected?: boolean }
 
 export interface Props {
@@ -120,6 +120,9 @@ export default class SiteBanner extends React.PureComponent<Props, State> {
       case 'reddit':
         logo = <RedditColorIcon />
         break
+      case 'soundcloud':
+        logo = <RedditColorIcon />
+        break
     }
 
     return logo
@@ -171,6 +174,8 @@ export default class SiteBanner extends React.PureComponent<Props, State> {
         return `${identifier} ${getLocale('on')} Vimeo`
       case 'github':
         return `${identifier} ${getLocale('on')} GitHub`
+      case 'soundcloud':
+        return `${identifier} ${getLocale('on')} SoundCloud`
       default:
         return identifier
     }

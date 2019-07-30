@@ -27,7 +27,7 @@ import {
 } from '../../../components/icons'
 import { Toggle } from '../../../components'
 
-export type Provider = 'twitter' | 'youtube' | 'twitch' | 'reddit' | 'vimeo' | 'github'
+export type Provider = 'twitter' | 'youtube' | 'twitch' | 'reddit' | 'vimeo' | 'github' | 'soundcloud'
 
 export interface Props {
   id?: string
@@ -50,6 +50,8 @@ export default class ToggleTips extends React.PureComponent<Props, {}> {
       case 'vimeo':
         return <VimeoColorIcon />
       case 'github':
+        return <GitHubColorIcon />
+      case 'soundcloud':
         return <GitHubColorIcon />
     }
   }
