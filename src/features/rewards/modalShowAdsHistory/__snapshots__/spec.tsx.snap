@@ -162,7 +162,7 @@ exports[`ModalShowAdsHistory tests basic tests matches the snapshot 1`] = `
             <span
               className="c11"
             >
-              0MISSING: adsPerHourPlural
+              0
             </span>
           </div>
         </div>
